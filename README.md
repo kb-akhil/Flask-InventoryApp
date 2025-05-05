@@ -88,7 +88,7 @@ Report on the inventory management, including product details and the locations 
 ![alt text](Report.png)
 
 
-
+------------------------------------------------------------------------------
 **Depoly in AWS EC2**
 
 
