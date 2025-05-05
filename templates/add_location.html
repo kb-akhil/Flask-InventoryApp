@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Location{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">🏢 Add Warehouse Location</h2>
+
+    <form method="POST" class="mb-5">
+        <label for="location_name" class="form-label">Location Name</label>
+        <input type="text" class="form-control mb-2" id="location_name" name="name" required>
+        <button type="submit" class="btn btn-theme">Add Location</button>
+    </form>
+
+    <h4>🪧 Existing Locations</h4>
+
+    {% if locations %}
+    <table class="table table-bordered table-hover">
+        <thead >
+            <tr>
+                <th style="background-color: hsl(272,78%,61%); color:white;">Location ID</th>
+                <th style="background-color: hsl(272,78%,61%); color:white;">Location Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for loc in locations %} 
+            <tr>
+                <td>{{ loc.location_id }}</td>
+                <td>{{ loc.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %} 
+    <p class="text-center text-muted">No locations added yet.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

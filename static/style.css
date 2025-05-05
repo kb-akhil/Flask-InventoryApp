@@ -1,0 +1,36 @@
+.nav-font{
+    color: aliceblue;
+}
+.title-font{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:  hsl(0, 0%, 0%);
+}
+.nav-bg{
+    background-color: hsl(272, 78%, 61%);
+}
+
+.btn-theme {
+    background-color: hsl(272, 78%, 61%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-theme:hover {
+    background-color: hsl(272, 78%, 50%);
+}
+.inv-banner {
+    background-color: hsl(272, 78%, 61%);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table{
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+

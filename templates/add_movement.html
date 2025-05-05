@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Move Product{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">🚚 Move Product Between Locations</h2>
+
+    <form method="POST" class="mb-5">
+        <div class="mb-4">
+            <label for="product_id" class="form-label">Product</label>
+            <select class="form-select" name="product_id" id="product_id" required>
+                {% for p in products %}
+                <option value="{{ p.custom_id }}">{{ p.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="from_location" class="form-label">From Location</label>
+            <select class="form-select" name="from_location" id="from_location">
+                <option value="">-- Not applicable --</option>
+                {% for l in locations %}
+                <option value="{{ l.name }}">{{ l.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="to_location" class="form-label">To Location</label>
+            <select class="form-select" name="to_location" id="to_location" required>
+                {% for l in locations %}
+                <option value="{{ l.name }}">{{ l.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="qty" class="form-label">Quantity</label>
+            <input type="number" class="form-control" name="qty" id="qty" required>
+        </div>
+
+        <button type="submit" class="btn btn-theme">Move Product</button>
+    </form>
+</div>
+{% endblock %}

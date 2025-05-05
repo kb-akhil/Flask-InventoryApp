@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Stock Report{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">📊 Product Stock Report</h2>
+
+    {% if report_data %}
+    <table class="table table-bordered table-hover shadow">
+        <thead class="text-white" style="background-color: hsl(272, 78%, 61%);">
+            <tr>
+                <th style="background-color: hsl(272, 78%, 61%); color: white;">Product ID</th>
+                <th style="background-color: hsl(272, 78%, 61%); color: white;">Name</th>
+                <th style="background-color: hsl(272, 78%, 61%); color: white;">Price</th>
+                <th style="background-color: hsl(272, 78%, 61%); color: white;">Location</th>
+                <th style="background-color: hsl(272, 78%, 61%); color: white;">Quantity</th>
+                <th style="background-color: hsl(272, 78%, 61%); color: white;">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in report_data %}
+            <tr>
+                <td>{{ row.product_id }}</td>
+                <td>{{ row.product_name }}</td>
+                <td>₹{{ row.price }}</td>
+                <td>{{ row.location }}</td>
+                <td>{{ row.qty }}</td>
+                <td>{{ row.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-info text-center mt-4">
+        No stock data available.
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

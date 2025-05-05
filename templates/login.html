@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Login{% endblock %}
+
+{% block content %}
+<div class="inv-banner text-center mb-5">
+    <h1 class="display-5 fw-bold text-white">📦 Inventory Management Console</h1>
+    <p class="text-muted">Please log in to dashboard.</p>
+</div>
+
+<style>
+    body {
+        font-family: 'Jost', sans-serif;
+    }
+
+    .auth-container {
+        max-width: 400px;
+        margin: auto;
+        background: hsl(272, 78%, 61%);
+        padding: 40px;
+        border-radius: 15px;
+        
+        color: white;
+    }
+
+    .auth-container h2 {
+        color: white;
+    }
+
+    .form-label {
+        color: white;
+    }
+
+    .form-control {
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .btn-theme {
+        background-color: #573b8a;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-theme:hover {
+        background-color: #6d44b8;
+    }
+
+    .alert-danger {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+    }
+</style>
+
+<div class="auth-container">
+    <h2 class="text-center mb-4">🔐 Admin Login</h2>
+
+    {% if error %}
+        <div class="alert alert-danger text-center">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST">
+        <div class="mb-3">
+            <label class="form-label">Admin ID</label>
+            <input type="text" name="adminid" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" required>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-theme">Login</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
