@@ -103,7 +103,7 @@ Report on the inventory management, including product details and the locations 
 2.Connect to Your EC2 Instance
     1.Open a terminal and SSH into your EC2 instance using the downloaded .pem key:
 
-    ssh -i "pem-key.pem" ubuntu@puplic ipv4 address
+    ssh -i "pem-key.pem" ubuntu@public ipv4 address
 
 3. Update and Install Dependencies
     
