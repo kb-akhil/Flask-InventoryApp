@@ -126,7 +126,8 @@ Report on the inventory management, including product details and the locations 
 
 Application Running Video
 
-<video controls src="outcome video.mp4" title="Title"></video>
+Google Drive link: https://drive.google.com/drive/folders/1NVGsOIarJ4X-G6W32xVx2uZMQ0fMmSY8?usp=sharing
+
 
 
 
