@@ -124,6 +124,10 @@ Report on the inventory management, including product details and the locations 
 
 ![alt text](ec2-run.png)
 
+Application Running Video
+
+<video controls src="outcome video.mp4" title="Title"></video>
+
 
 
 
