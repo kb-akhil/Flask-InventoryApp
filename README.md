@@ -28,7 +28,7 @@ How to Run Locally
 
 1.Clone repo
 
-git clone https://github.com/kb-akhil/Inventory-app.git
+git clone https://github.com/kb-akhil/Flask-InventoryApp.git
 
 cd inventory-app
 
