@@ -114,7 +114,7 @@ Report on the inventory management, including product details and the locations 
 
 4. Upload Your Flask Application to EC2
 
-    git clone https://github.com/yourusername/yourrepo.git
+    git clone https://github.com/kb-akhil/Flask-InventoryApp.git
 
 5. Run Your Flask Application
 
